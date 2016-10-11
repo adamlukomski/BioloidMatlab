@@ -11,7 +11,7 @@ all the directories that are written as +dir as structures with functions inside
 so you can use dir.function() at the Matlab console.
 
 First choose serial port number - 0,1,2,... for linux /dev/ttyUSB0, 1, etc., for Windows
-- 5,6,7,8 for COM5, COM6, ... ans so on.
+5,6,7,8 for COM5, COM6, ... ans so on.
 
 ```matlab
 hw.start( 0 )
@@ -42,9 +42,9 @@ hw.set_mode_joint( 13 )
 hw.set_position( 13, 0 )
 pause(0.3)
 hw.set_mode_wheel( 13 )
-hw.set_speed( 13, 0.25 )
+hw.set_speed( 13, -0.25 )
 ```
-set_speed() now controls the PWM on the motor.
+set_speed() now controls the PWM on the motor, remember that now you can move forward and backwards (-1.0 ... 1.0 )
 
 get_pose() and set_pose() reads the current pose of a humanoid robot, including a little offset for hips so they don't
 collide if you accidentally push zeros to all joints.
