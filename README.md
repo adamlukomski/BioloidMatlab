@@ -55,6 +55,10 @@ Have fun!
 For some older Matlabs inside the start.m the function computer() that recognises the
 architecture must be computer('arch').
 
+## bug: computer('arch')
+The architecture detection has changed the syntax, the correct one now is just computer(), fixed.
+
+
 # License Warning
 All the files inside specific architectures belong to the official Robotis Bioloid development
 tools. For newer version fetch the ones from their SDKs.

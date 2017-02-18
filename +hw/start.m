@@ -1,7 +1,7 @@
 %% bioloid access functions% by Adam Lukomski, 2013%
 function err = hw_start( i )
 
-switch computer('arch')
+switch computer()
     case 'GLNX86'
         display('linux 32-bit stuff')
 	loadlibrary(['+hw/' computer '/libdxl.so'],['+hw/' computer '/libdxl.h'])
